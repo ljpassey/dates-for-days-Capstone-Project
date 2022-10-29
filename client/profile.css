@@ -1,0 +1,184 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+html {
+    background: url("https://images.unsplash.com/photo-1633508906839-148ee6bb7986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.864);
+    opacity: 1;
+    height: 75px;
+    width: 100vw;
+    flex-direction: row;
+    box-shadow: 0px 1px 50px rgba(255, 255, 255, 0.587);
+}
+
+header>nav>a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    right: 0px;
+    margin-right: 20px;
+    padding: 10px;
+    width: auto;
+    opacity: 1;
+    z-index: 2;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px white;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.277);
+}
+
+
+
+#profile {
+    background-color: white;
+    color:black
+}
+
+#create:hover {
+    /* background-color: rgb(255, 253, 253); */
+    /* border: solid rgb(216, 216, 216) 5px; */
+    box-shadow: none;
+    box-shadow: 0px 1px 0px 5px rgb(255, 255, 255);
+    /* color: black; */
+    transition: 0.4s;
+
+}
+
+header>h1 {
+    display: inline;
+    position: absolute;
+    left: 25px;
+    width: 75vw;
+    justify-content: left;
+
+}
+
+h1>a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 1px 25px rgba(255, 255, 255, 0.497);
+}
+
+h1>a:hover {
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.878);
+    transition: 0.4s;
+}
+
+main {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+    margin-bottom: 500px;
+
+}
+
+.dateCard {
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.386);
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 25vw;
+    top: 15vh;
+    border-radius: 20px;
+    margin-bottom: 200px;
+    box-shadow: 5px 5px 5px rgb(18, 33, 42);
+}
+
+#cardDiv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.dateCard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 20px;
+}
+
+button {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.522);
+    margin-bottom: 50px;
+    font-size: larger;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    /* height: 100vh; */
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.profile {
+    margin: 20px;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.848);
+    border-radius: 15px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    box-shadow: 0px 2px 20px white;
+
+}
+
+.profile2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 35vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.675);
+    border-radius: 15px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0px 2px 20px white;
+    border: solid white 5px;
+}

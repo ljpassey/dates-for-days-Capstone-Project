@@ -13,5 +13,14 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 const { CONNECTION_STRING } = process.env
 
 module.exports = {
-    
+    getDateDetails: (req,res) => {
+      sequelize.query(`
+        SELECT date_title, date_description, created_by FROM dates
+        ORDER BY RANDOM()
+        LIMIT 1
+      `)
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+      })
+    }
 }
