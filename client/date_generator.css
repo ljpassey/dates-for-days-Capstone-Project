@@ -89,7 +89,7 @@ main {
 
 }
 
-.dateCard {
+#dateCard {
     width: 50vw;
     height: 50vh;
     background-color: rgba(255, 255, 255, 0.386);
@@ -116,7 +116,7 @@ main {
     text-align: center;
 }
 
-.dateCard {
+#dateCard {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -140,7 +140,7 @@ button {
 
 .mainSection {
     width: auto;
-    height: 90vh;
+    height: auto;
     display: flex;
     align-items;
     margin: 20px;
@@ -149,16 +149,16 @@ button {
     
 }
 
-/* .formSection{
+.formSection{ 
     width: auto;
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: bisque;
-    
-} */
 
-/* .formContainer {
+    
+} 
+
+.formContainer {
     width: 35vw;
     height: 75vh;
     display: flex;
@@ -166,16 +166,15 @@ button {
     
     margin: 5px;
     text-align: center;
-    background-color: aqua;
 
-} */
+}
 
 #dateCreateForm {
     width:35vw;
     height: auto;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     
     margin: 25px;
     padding: 30px;
@@ -183,9 +182,6 @@ button {
     border-radius: 15px;
     position: absolute;
     color: white;
-    
-    
-
 }
 
 #dateDescription {
@@ -208,7 +204,7 @@ button {
     border: 0;
 }
 
-.dateResults {
+#dateResults {
     width: 55vw;
     position: absolute;
     right: 10px;
@@ -220,3 +216,5 @@ button {
     justify-content: center;
     
 }
+
+#formSubmity
