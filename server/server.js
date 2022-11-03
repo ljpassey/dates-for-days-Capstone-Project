@@ -12,5 +12,4 @@ app.use(cors())
 app.get('/date', getDateDetails)
 app.post('/date', addDate)
 
-
 app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))

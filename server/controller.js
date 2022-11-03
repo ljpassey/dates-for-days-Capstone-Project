@@ -24,6 +24,17 @@ module.exports = {
       })
     }, 
     addDate: (req, res) => {
-      
+      let { date_title, date_description } = req.body
+
+      sequelize.query(`
+        INSERT INTO custom_dates (date_title, date_description)
+        VALUES ('${date_title}', '${date_description}');
+        
+        SELECT date_title, date_description FROM custom_dates
+      `)
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+      })
+      .catch(err => console.log(err)) 
     }
 }

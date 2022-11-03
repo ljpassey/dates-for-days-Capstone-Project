@@ -17,6 +17,7 @@ function getDateInfo() {
                 cardDiv.innerHTML += dateCard
             })
         })
+        .catch(err => console.log(err))
 }
 
 dateBtn.addEventListener('click', getDateInfo)
