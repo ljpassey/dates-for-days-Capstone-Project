@@ -1,9 +1,9 @@
 {
-  "name": "clark-county-admin",
+  "name": "Dates-For-Days",
   "version": "1.0.0",
-  "description": "",
   "main": "server/server.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,8 +14,18 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "path": "^0.12.7",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.25.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljpassey/dates-for-days-Capstone-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ljpassey/dates-for-days-Capstone-Project/issues"
+  },
+  "homepage": "https://github.com/ljpassey/dates-for-days-Capstone-Project#readme",
+  "description": ""
 }
