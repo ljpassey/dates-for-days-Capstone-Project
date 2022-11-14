@@ -22,7 +22,7 @@ function createDateCard() {
 
     
 
-    axios.post('http://localhost:4004/date/', body)
+    axios.post('/date/', body)
         .then(res => {
             console.log('it worked')
             

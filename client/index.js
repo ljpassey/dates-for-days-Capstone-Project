@@ -5,7 +5,7 @@ const dateBtn = document.getElementById('dateBtn')
 function getDateInfo() {
     cardDiv.innerHTML = ''
 
-    axios.get('http://localhost:4004/date/')
+    axios.get('/date/')
         .then(res => {
             res.data.forEach(elem => {
                 let dateCard = `
