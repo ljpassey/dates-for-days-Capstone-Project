@@ -27,6 +27,6 @@ app.get('/profJS', (req, res) => res.sendFile(path.join(__dirname, '../client/pr
 app.get('/date', getDateDetails)
 app.post('/date', addDate)
 
-const {SERVER_PORT} = process.env
+const {PORT} = process.env || 4004
 
-app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
+app.listen(PORT, () => console.log(`up on ${PORT}`))

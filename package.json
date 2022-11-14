@@ -18,14 +18,6 @@
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.25.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ljpassey/dates-for-days-Capstone-Project.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ljpassey/dates-for-days-Capstone-Project/issues"
-  },
-  "homepage": "https://github.com/ljpassey/dates-for-days-Capstone-Project#readme",
-  "description": ""
+  }
 }
+
