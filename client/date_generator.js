@@ -4,9 +4,6 @@ const dateDescription = document.getElementById('dateDescription')
 const dateContainer = document.getElementById('dateContainer')
 const formSubmit = document.getElementById('formSubmit')
 
-// function dateCreateFormSubmit() {
-    
-// }
 
 
 function createDateCard() {
@@ -17,10 +14,6 @@ function createDateCard() {
     }
 
     dateContainer.innerHTML = ''
-
-    
-
-    
 
     axios.post('/date/', body)
         .then(res => {
@@ -45,4 +38,3 @@ formSubmit.addEventListener('click', (e) => {
     createDateCard()
 })
 
-// createDateCard()
