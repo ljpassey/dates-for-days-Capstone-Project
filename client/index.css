@@ -5,7 +5,7 @@
 }
 
 html {
-    background: url("https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80") no-repeat center center fixed;
+    background: url("https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80") repeat center center fixed;
     height: 100%;
     /* display: flex; */
 }
@@ -17,10 +17,9 @@ header {
     color: white;
     background-color: rgba(0, 0, 0, 0.555);
     opacity: 1;
-    height: 10%;
-    /* width: auto; */
+    height: auto;
     flex-direction: row;
-    box-shadow: 0px 1px 50px rgba(255, 255, 255, 0.813);
+    box-shadow: 0px 1px 50px rgb(0, 0, 0);
 }
 
 nav {
@@ -38,7 +37,7 @@ header > nav > a {
     flex-wrap: wrap;
     flex-direction:row;
     justify-content: center;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     width: auto;
     opacity: 1;
@@ -61,7 +60,6 @@ header > h1{
     text-align: center;
     justify-content: center;
     align-items: center;
-    /* width: auto; */
     border-radius: 10px;
     padding: 10px;
     
@@ -89,7 +87,7 @@ body {
 
 main {
     width: auto;
-    padding:5px;
+    /* padding:5px; */
     height: 90%;
     display: flex;
     justify-content: center;
@@ -98,18 +96,18 @@ main {
 }
 
 .dateCard {
-    width: 75%;
-    height: 85%;
+    width: 87%;
+    height: 60%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     border-radius: 20px;
     box-shadow: 0px 5px 25px rgb(255, 255, 255);
     border: solid white 1px;
-    transition: 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1) ;
 }
     
 
@@ -118,18 +116,16 @@ main {
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.468);
     width: 90%;
-    height: 90%;
+    height: 70%;
 }
 
 #cardDiv {
-    padding: 30px;
+    padding: 25px;
     display: flex;
     width: 75%;
-    height: 100%;
+    height: auto;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
     background-color: rgb(255, 253, 253);
     color: white;
@@ -169,14 +165,12 @@ footer {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.555);
     opacity: 1;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
     height: 10%;
-    box-shadow: 0px 1px 20px rgba(255, 255, 255, 0.813);
-    
-
+    box-shadow: 0px 1px 20px rgb(0, 0, 0);
 }
 
 footer > h3 > a {

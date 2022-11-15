@@ -25,6 +25,8 @@ function createDateCard() {
                     <h1>${elem.date_title}</h1>
                     <br>
                     <h3>${elem.date_description}</h3>
+                    <br>
+                    <button id="deleteBtn">Delete</button>
                 </div>`
 
                 dateContainer.innerHTML += newDateCard

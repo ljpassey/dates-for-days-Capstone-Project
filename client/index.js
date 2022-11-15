@@ -11,6 +11,7 @@ function getDateInfo() {
                 let dateCard = `
                     <h1>${elem.date_title}</h1>
                     <br>
+                    <br>
                     <h3>${elem.date_description}</h3>
                   
                 `

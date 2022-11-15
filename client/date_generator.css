@@ -1,81 +1,144 @@
 * {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
+    box-sizing: content-box;
 
 }
 
 html {
-    background: url("http://images.unsplash.com/photo-1599458252573-56ae36120de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center fixed;
+    background: url("http://images.unsplash.com/photo-1599458252573-56ae36120de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") repeat center center fixed;
+    height: 100%;
 }
 
 header {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.891);
-    height: 10vh;
-    width: 100vw;
+    height: auto;
+    width: auto;
     flex-direction: row;
-    /* border-bottom: solid white 3px; */
-    box-shadow: 0px 5px 50px rgb(255, 255, 255);
+    box-shadow: 0px 5px 50px rgb(0, 0, 0);
 }
 
 header>nav>a {
     color: white;
-        text-decoration: none;
-        display: inline-flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative;
-        right: 0px;
-        margin-right: 20px;
-        padding: 10px;
-        width: auto;
-        opacity: 1;
-        z-index: 2;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0px 1px 10px white;
-        font-size: large;
-        background-color: rgba(0, 0, 0, 0.277);
-}
-
-#profile:hover {
-    /* background-color: rgb(255, 253, 253); */
-    /* border: solid rgb(216, 216, 216) 5px; */
-    box-shadow: none;
-    box-shadow: 0px 1px 0px 5px rgb(255, 255, 255);
-    /* color: black; */
-    transition: 0.4s;
-
-}
-
-#create {
-    background-color: white;
-    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    width: auto;
+    opacity: 1;
+    z-index: 2;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px white;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.277);
 }
 
 header>h1 {
-    display: inline;
-    position: absolute;
-    left: 25px;
-    width: 75vw;
-    justify-content: left;
-
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 h1>a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    margin: 5px;
+    border-radius: 10px;
+    transition: 0.6s;
+    align-items: flex-end;
+    justify-content: right;
 }
 
 h1>a:hover {
     text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.878);
+}
+
+#profile:hover {
+    box-shadow: none;
+    box-shadow: 0px 1px 0px 5px rgb(255, 255, 255);
     transition: 0.4s;
+}
+
+.mainSection {
+    display: block;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#dateCreateForm {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.749);
+    border-radius: 15px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px white;
+
+}
+
+#dateCreateForm > h2 {
+    margin: 10px;
+}
+
+#dateTitle {
+    height: auto;
+    width: 90%;
+    padding: 20px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: large;
+    border-radius: 5px;
+    border: 0;
+    word-wrap: normal;
+}
+
+#dateDescription {
+    height: auto;
+    width: 90%;
+    padding: 20px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: large;
+    border-radius: 5px;
+    border: 0;
+    word-wrap: normal;
+}
+
+#formSubmit {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+
+#dateResults {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
 }
 
 #dateCard {
@@ -105,95 +168,6 @@ h1>a:hover {
     text-align: center;
 }
 
-#dateCard {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    margin: 20px;
-}
-
-.mainSection {
-    width: auto;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    margin: 10px;
-}
-
-.formContainer {
-    width: 40vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    text-align: center;
-    justify-content: center;
-    
-
-}
-
-#dateCreateForm {
-    width:40vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    margin: 25px;
-    padding: 50px;
-    background-color: rgba(0, 0, 0, 0.749);
-    border-radius: 15px;
-    position: absolute;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-
-
-#dateDescription {
-    height: 150px;
-    width: 37vw;
-    padding: 20px;
-    text-align: left;
-    margin-top: 10px;
-    font-size: large;
-    border-radius: 5px;
-    border: 0;
-    word-wrap: break-word;
-}
-
-#dateTitle{
-    height: 50px;
-    width: 37vw;
-    padding: 20px;
-    text-align: left;
-    margin-top: 10px;
-    font-size: large;
-    border-radius: 5px;
-    border: 0;
-    word-wrap: break-word;
-}
-
-
-
-#dateResults {
-    width: 55vw;
-    position: absolute;
-    right: 10px;
-    top: 10vh;
-    height: auto;
-    display: flex;
-    margin: 5px;
-    /* background-color: rgba(255, 255, 255, 0.071); */
-    border-radius: 10px;
-    justify-content: center;
-    
-}
-
 #dateContainer {
     background-color: rgba(0, 0, 0, 0.749);
     margin: 10px;
@@ -212,12 +186,4 @@ h1>a:hover {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-}
-
-#formSubmit {
-    width: 10vw;
-    height: 5vh;
-    border-radius: 10px;
-    margin: 20px;
-   
 }
