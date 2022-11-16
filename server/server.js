@@ -22,9 +22,6 @@ app.get('/indexJS', (req, res) => res.sendFile(path.join(__dirname, '../client/i
 app.get('/dgHTML', (req, res) => res.sendFile(path.join(__dirname, '../client/date_generator.html')))
 app.get('/dgCSS', (req, res) => res.sendFile(path.join(__dirname, '../client/date_generator.css')))
 app.get('/dgJS', (req, res) => res.sendFile(path.join(__dirname, '../client/date_generator.js')))
-app.get('/profHTML', (req, res) => res.sendFile(path.join(__dirname, '../client/profile.html')))
-app.get('/profCSS', (req, res) => res.sendFile(path.join(__dirname, '../client/profile.css')))
-app.get('/profJS', (req, res) => res.sendFile(path.join(__dirname, '../client/profile.js')))
 
 //Endpoints connecting background images
 app.get('/indexJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/index.jpg')))

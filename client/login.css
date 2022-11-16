@@ -12,7 +12,6 @@ html {
 
 body {
     height: 100vh;
-
     display: grid;
     grid-template-areas:
     'top top'
@@ -32,7 +31,6 @@ header {
     margin-left: 30px;
     font-size: xx-large;
     text-shadow: 0px 1px 20px white;
-
 }
 
 footer {
@@ -63,7 +61,6 @@ form {
     justify-content: stretch;
     width: 90%;
     height: 70%;
-   
     background-color: rgba(0, 0, 0, 0.538);
     color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -84,7 +81,6 @@ input {
 }
 
 button {
-    
     display: flex;
     align-items: stretch;
     justify-content: center;

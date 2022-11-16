@@ -1,5 +1,3 @@
-
-
 const loginForm = document.getElementById('loginForm')
 const registerForm = document.getElementById('registerForm')
 const loginEmail = document.getElementById('loginEmail')
@@ -18,6 +16,7 @@ function login() {
 
     axios.post('/login', body)
         .then(res => {
+            
             loginEmail.value = ''
             loginPassword.value = ''
         

@@ -1,8 +1,8 @@
 const cardDiv = document.getElementById('cardDiv')
 const dateBtn = document.getElementById('dateBtn')
 
-
 function getDateInfo() {
+
     cardDiv.innerHTML = ''
 
     axios.get('/date/')
@@ -13,7 +13,6 @@ function getDateInfo() {
                     <br>
                     <br>
                     <h3>${elem.date_description}</h3>
-                  
                 `
                 cardDiv.innerHTML += dateCard
             })

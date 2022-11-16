@@ -8,8 +8,6 @@ const spanId = document.getElementById('customDateCard')
 
 const email = window.localStorage.getItem('email')
 
-
-
 function addDate() {
 
     let body = {
@@ -39,7 +37,6 @@ function addDate() {
             })
         })
 }
-
 
 function getUserCreatedDates() {
 
@@ -72,7 +69,6 @@ function getUserCreatedDates() {
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault()
     addDate()
-    
 })
 
 getUserCreatedDates();

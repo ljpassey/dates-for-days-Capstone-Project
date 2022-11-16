@@ -2,7 +2,6 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-
 }
 
 html {
@@ -110,13 +109,11 @@ h1>a:hover {
 
 }
 
-
 #dateTitle {
     height: auto;
     width: auto;
     padding: 10px;
     text-align: center;
-   
     font-size: large;
     border-radius: 5px;
     border: 0;
@@ -156,8 +153,6 @@ h1>a:hover {
     flex-direction: column;
     border-radius: 20px;
 }
-
-
 
 #dateContainer {
     width: 95%;
