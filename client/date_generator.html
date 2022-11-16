@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +13,17 @@
             font-family: 'Libre Baskerville', serif;
         }
     </style>
-</head>
-
-<body>
+    </head>
     <header>
         <h1>
-            <a href="/">Dates For Days</a>
+            <a href="/indexHTML">Dates For Days</a>
         </h1>
         <nav>
-            <!-- <a href="/dgHTML" id="create">Create Custom Dates</a> -->
-            <a href="/profHTML" id="profile">Login</a>
+            <a href="/dgHTML" id="profile">Add Custom Dates</a>
         </nav>
     </header>
+    <body>
+    
     <section class="mainSection">
         <section class="formSection">
             <div class="formContainer">
@@ -33,24 +32,22 @@
                     <br>
                     <br>
                     <label>Enter the title of your date</label>
-                    <input type="text" placeholder="Date Title..." id="dateTitle" size="100"/>
+                    <input type="text" placeholder="Date Title..." id="dateTitle"/>
                     <br>
                     <br>
                     <label>Enter the description of your date</label>
-                    <input type="textbox" placeholder="Date Description..." id="dateDescription" size="500" />
+                    <input type="textbox" placeholder="Date Description..." id="dateDescription"  />
                     <br>
-                    <button id="formSubmit">Add</button>
+                    <button id="formSubmit" onclick=Document.getElementById(dateTitle).value=''" onclick="document.getElementById('dateDescription').value=''">Add</button>
                 </form>
             </div>
         </section>
-        <section id="dateResults">
-            <section id="dateContainer">Results</section>
-        </section>
+    <section id="dateContainer">
+        
+    </section>    
     </section>
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/dgJS"></script>
-</body>
-
+    </body>
 </html>
 

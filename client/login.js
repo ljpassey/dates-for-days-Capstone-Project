@@ -1,4 +1,7 @@
+
+
 const loginForm = document.getElementById('loginForm')
+const registerForm = document.getElementById('registerForm')
 const loginEmail = document.getElementById('loginEmail')
 const loginPassword = document.getElementById('loginPassword')
 const loginBtn = document.getElementById('loginBtn')
@@ -15,11 +18,11 @@ function login() {
 
     axios.post('/login', body)
         .then(res => {
-
-            let email = res.data[0].email
-            email = ''
-
+            loginEmail.value = ''
+            loginPassword.value = ''
+        
             if (res.data.length > 0) {
+                console.log(res.data)
                 alert("Login successful!")
                 window.localStorage.setItem('email', res.data[0].email)
                 location.assign('/indexHTML')
@@ -27,14 +30,22 @@ function login() {
                 alert("Invalid login")
             }
         })
-        .catch(err => console.log(err))
 }
 
 function register() {
 
     let body = {
-        register_email
+        register_email: registerEmail.value,
+        register_password: registerPassword.value
     }
+
+    console.log(body)
+
+    axios.post('/register', body)
+        .then(() => alert("Registration successful! You can now log in to Dates For Days")
+        )
+        .catch(() => alert("Registration attempt unsuccessful. Try again with a different email address.")
+        )
 }
 
 loginForm.addEventListener('submit', (e) => {
@@ -42,7 +53,7 @@ loginForm.addEventListener('submit', (e) => {
     login()
 })
 
-registerBtn.addEventListener('click', (e) => {
+registerForm.addEventListener('submit', (e) => {
     e.preventDefault()
     register()
 })

@@ -6,7 +6,7 @@ const path = require('path')
 
 const app = express()
 
-const { getDateDetails, addDate, runLogin } = require('./controller')
+const { getDateDetails, addDate, runLogin, register, getUserDates } = require('./controller')
 
 //Middleware
 app.use(express.json())
@@ -32,10 +32,12 @@ app.get('/dgJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/ima
 app.get('/profJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/prof.jpg')))
 app.get('/loginJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/login.jpg')))
 
-
+//Endpoints connecting controller functions and axios methods
 app.get('/date', getDateDetails)
 app.post('/date', addDate)
 app.post('/login', runLogin)
+app.post('/register', register)
+app.post('/userCreatedDates', getUserDates)
 
 const {PORT} = process.env || 4004
 
