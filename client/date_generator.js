@@ -38,6 +38,12 @@ function addDate() {
         })
 }
 
+function deleteDateIdea(date_id) {
+    axios.delete(`/date/${date_id}`)
+        .then(getUserCreatedDates())
+        .catch(err => console.log(err))
+}
+
 function getUserCreatedDates() {
 
     let body = {
@@ -52,25 +58,31 @@ function getUserCreatedDates() {
             console.log(res.data)
             res.data.forEach(elem => {
                  newDateCard = 
-                 `<div class="customDateCard">
+                 `<div class="customDateCard" id="${elem.date_id}">
                     <h1>${elem.date_title}</h1>
                     <br>
                     <h3>${elem.date_description}</h3>
                     <br>
                     <h6>${elem.created_by}</h6>
-                    <button id="deleteBtn" >Delete</button>
+                    <button onclick="deleteDateIdea(${elem.date_id});refreshPage()">Delete</button>
                 </div>`
-
             dateContainer.innerHTML += newDateCard
         })
     })
 }
 
+function refreshPage(){
+    window.location.reload()
+    console.log("page refreshed");
+} 
+
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault()
     addDate()
+    refreshPage()
 })
 
-getUserCreatedDates();
+getUserCreatedDates()
+
 
 

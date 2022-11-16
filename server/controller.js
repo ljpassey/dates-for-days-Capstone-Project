@@ -87,5 +87,21 @@ module.exports = {
     .then((dbRes) => {
       res.status(200).send(dbRes[0])
     })
-  }
+  },
+
+  deleteDateIdea: (req, res) => {
+      const { id } = req.params
+
+      sequelize.query(`
+      DELETE FROM custom_dates WHERE date_id = ${id}
+      `)
+          .then((dbRes) => {
+              console.log(dbRes)
+              res.status(200).send(dbRes[0])
+          })
+          .catch((err) => {
+              console.log(err)
+              res.status(500).send('sequelize error')
+          })
+  },
 }

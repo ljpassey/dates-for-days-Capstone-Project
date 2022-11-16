@@ -6,7 +6,7 @@ const path = require('path')
 
 const app = express()
 
-const { getDateDetails, addDate, runLogin, register, getUserDates } = require('./controller')
+const { getDateDetails, addDate, runLogin, register, getUserDates, deleteDateIdea } = require('./controller')
 
 //Middleware
 app.use(express.json())
@@ -35,6 +35,7 @@ app.post('/date', addDate)
 app.post('/login', runLogin)
 app.post('/register', register)
 app.post('/userCreatedDates', getUserDates)
+app.delete('/date/:id', deleteDateIdea)
 
 const {PORT} = process.env || 4004
 

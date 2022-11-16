@@ -1,5 +1,6 @@
 const cardDiv = document.getElementById('cardDiv')
 const dateBtn = document.getElementById('dateBtn')
+const logoutBtn = document.getElementById('logoutBtn')
 
 function getDateInfo() {
 
@@ -20,4 +21,10 @@ function getDateInfo() {
         .catch(err => console.log(err))
 }
 
+function clearLocalStorage() {
+    console.log()
+    window.localStorage.removeItem('email')
+}
+
 dateBtn.addEventListener('click', getDateInfo)
+logoutBtn.addEventListener('click', clearLocalStorage)
