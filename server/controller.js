@@ -22,8 +22,8 @@ module.exports = {
       .then((dbRes) => {
         res.status(200).send(dbRes[0])
       })
-    }, 
-    addDate: (req, res) => {
+  }, 
+  addDate: (req, res) => {
       let { date_title, date_description } = req.body
 
       sequelize.query(`
@@ -36,5 +36,19 @@ module.exports = {
         res.status(200).send(dbRes[0])
       })
       .catch(err => console.log(err)) 
-    }
+  },
+  runLogin: (req, res) => {
+    
+      const { login_email, login_password } = req.body
+
+      sequelize.query(`
+      SELECT * 
+      FROM users
+      WHERE email = ('${login_email}') AND password = ('${login_password}')
+      `)
+      .then((dbRes) => {
+        res.status(200).send(dbRes[0])
+      })
+      .catch(err => console.log(err))
+  }
 }

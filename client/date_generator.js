@@ -35,6 +35,10 @@ function createDateCard() {
     })
 }
 
+function displayDateCards() {
+     
+}
+
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault()
     createDateCard()

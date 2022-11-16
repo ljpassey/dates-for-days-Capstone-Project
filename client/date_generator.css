@@ -6,8 +6,9 @@
 }
 
 html {
-    background: url("http://images.unsplash.com/photo-1599458252573-56ae36120de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") repeat center center fixed;
+    background: url("/dgJPG") repeat center center fixed;
     height: 100%;
+    background-size: cover;
 }
 
 header {

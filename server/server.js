@@ -6,15 +6,17 @@ const path = require('path')
 
 const app = express()
 
-const { getDateDetails, addDate } = require('./controller')
-
+const { getDateDetails, addDate, runLogin } = require('./controller')
 
 //Middleware
 app.use(express.json())
 app.use(cors())
 
 //Endpoints connecting HTML, CSS, and JS
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../client/index.html')))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../client/login.html')))
+app.get('/loginJS', (req, res) => res.sendFile(path.join(__dirname, '../client/login.js')))
+app.get('/loginCSS', (req, res) => res.sendFile(path.join(__dirname, '../client/login.css')))
+app.get('/indexHTML', (req, res) => res.sendFile(path.join(__dirname, '../client/index.html')))
 app.get('/indexCSS', (req, res) => res.sendFile(path.join(__dirname, '../client/index.css')))
 app.get('/indexJS', (req, res) => res.sendFile(path.join(__dirname, '../client/index.js')))
 app.get('/dgHTML', (req, res) => res.sendFile(path.join(__dirname, '../client/date_generator.html')))
@@ -24,8 +26,16 @@ app.get('/profHTML', (req, res) => res.sendFile(path.join(__dirname, '../client/
 app.get('/profCSS', (req, res) => res.sendFile(path.join(__dirname, '../client/profile.css')))
 app.get('/profJS', (req, res) => res.sendFile(path.join(__dirname, '../client/profile.js')))
 
+//Endpoints connecting background images
+app.get('/indexJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/index.jpg')))
+app.get('/dgJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/dg.jpg')))
+app.get('/profJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/prof.jpg')))
+app.get('/loginJPG', (req, res) => res.sendFile(path.join(__dirname, '../client/images/login.jpg')))
+
+
 app.get('/date', getDateDetails)
 app.post('/date', addDate)
+app.post('/login', runLogin)
 
 const {PORT} = process.env || 4004
 

@@ -1,0 +1,117 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+
+html {
+    background: url("/loginJPG") repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas:
+    'top top'
+    'login register'
+    'bottom bottom';
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 6fr 1fr;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: top;
+    color: white;
+    margin-top: 10%;
+    margin-left: 30px;
+    font-size: xx-large;
+    text-shadow: 0px 1px 20px white;
+
+}
+
+footer {
+    grid-area: bottom;
+}
+
+section.login {
+    grid-area: login;
+}
+
+section.register {
+    grid-area: register;
+}
+
+section {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: stretch;
+    width: 90%;
+    height: 70%;
+   
+    background-color: rgba(0, 0, 0, 0.538);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px white;
+    text-shadow: 0px 2px 20px white;
+}
+
+
+input {
+    text-align: center;
+    width: 90%;
+    height: 8%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px 20px white;
+    font-size: larger;
+}
+
+button {
+    
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    box-shadow: 0px 2px 20px white;
+    cursor: pointer;
+    font-size:medium;
+}
+
+#loginForm {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+#registerForm {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
