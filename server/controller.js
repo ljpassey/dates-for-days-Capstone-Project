@@ -16,7 +16,7 @@ module.exports = {
 
   getDateDetails: (req,res) => {
       sequelize.query(`
-        SELECT date_title, date_description, created_by FROM dates
+        SELECT date_title, date_description FROM dates
         ORDER BY RANDOM()
         LIMIT 1
       `)
