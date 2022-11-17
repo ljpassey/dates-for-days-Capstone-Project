@@ -29,7 +29,7 @@ function addDate() {
                     <br>
                     <h3>${elem.date_description}</h3>
                     <br>
-                    <h6>${elem.created_by}</h6>
+                    <br>
                     <button id="deleteBtn">Delete</button>
                 </span>`
 
@@ -63,8 +63,7 @@ function getUserCreatedDates() {
                     <br>
                     <h3>${elem.date_description}</h3>
                     <br>
-                    <h6>${elem.created_by}</h6>
-                    <button onclick="deleteDateIdea(${elem.date_id});refreshPage()">Delete</button>
+                    <button id="deleteBtn" onclick="deleteDateIdea(${elem.date_id});refreshPage()">Delete</button>
                 </div>`
             dateContainer.innerHTML += newDateCard
         })
@@ -78,8 +77,15 @@ function refreshPage(){
 
 formSubmit.addEventListener('click', (e) => {
     e.preventDefault()
-    addDate()
-    refreshPage()
+    if (dateTitle.value.length === 0) {
+        alert("Date Title is required")
+    } else if (dateDescription.value.length === 0) {
+        alert("Date Description is required")
+    } else {
+        addDate()
+        refreshPage()
+    }
+    
 })
 
 getUserCreatedDates()

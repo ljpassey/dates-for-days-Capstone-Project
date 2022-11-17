@@ -77,14 +77,21 @@ h1 > a:hover{
     text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.878);
 }
 
+main {
+    height: 80vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dateCard {
     width: auto;
-    height: auto;
+    height: max-content;
     padding: 20px;
     margin: 10px;
     background-color: rgba(255, 255, 255, 0.3);
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
@@ -97,13 +104,12 @@ h1 > a:hover{
     border: solid white 5px;
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.468);
-    width: auto;
-    height: auto;
-    margin: 20px;
+    padding: 30px;
+    margin: 10px;
 }
 
 #cardDiv {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     width: 90%;
     height: auto;
@@ -135,12 +141,6 @@ h1 > a:hover{
 #dateBtn:hover{
     box-shadow: none;
     box-shadow: 1px 1px 25px rgb(250, 250, 250);
-}
-
-body {
-    height: auto;
-    display: block;
-    justify-content: space-evenly;
 }
 
 footer {
@@ -175,7 +175,6 @@ a {
     justify-content: center;
     text-decoration: none;
     width: 100%;
-  
 }
 
 

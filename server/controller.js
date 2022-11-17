@@ -13,7 +13,7 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 const { CONNECTION_STRING } = process.env
 
 module.exports = {
-
+//Pulls a random date idea from the main dates table
   getDateDetails: (req,res) => {
       sequelize.query(`
         SELECT date_title, date_description FROM dates
@@ -24,7 +24,7 @@ module.exports = {
         res.status(200).send(dbRes[0])
       })
   }, 
-
+//Creates a date and adds it into the custom_dates table with the user's email passed in for later verification
   addDate: (req, res) => {
       let { date_title, date_description, email } = req.body
 
@@ -41,7 +41,7 @@ module.exports = {
       })
       .catch(err => console.log(err)) 
   },
-
+//Checks to see if a user is in the system that matches what was input in the login form
   runLogin: (req, res) => {
 
       const { login_email, login_password } = req.body
@@ -56,7 +56,7 @@ module.exports = {
         console.log(dbRes[0])
       })
   },
-
+//Creates a new user and adds it to the users table
   register: (req, res) => {
 
     const { register_email, register_password } = req.body
@@ -74,7 +74,7 @@ module.exports = {
       res.status(401).json({ message: 'Registration Unsuccessful' });
     })
   },
-
+//Gets all of the date ideas from custom_dates that the logged in user has created
   getUserDates: (req, res) => {
 
   let { date_title, date_description, email } = req.body
@@ -88,7 +88,7 @@ module.exports = {
       res.status(200).send(dbRes[0])
     })
   },
-
+//Deletes a date idea from the custom_dates table when the delete button is clicked
   deleteDateIdea: (req, res) => {
       const { id } = req.params
 
