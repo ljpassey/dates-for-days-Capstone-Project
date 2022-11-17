@@ -34,7 +34,7 @@ app.get('/date', getDateDetails)
 app.post('/date', addDate)
 app.post('/login', runLogin)
 app.post('/register', register)
-app.post('/userCreatedDates', getUserDates)
+app.get('/userCreatedDates', getUserDates)
 app.delete('/date/:id', deleteDateIdea)
 
 const {PORT} = process.env || 4004

@@ -1,6 +1,7 @@
 const cardDiv = document.getElementById('cardDiv')
 const dateBtn = document.getElementById('dateBtn')
 const logoutBtn = document.getElementById('logoutBtn')
+const email = window.localStorage.getItem('email')
 
 function getDateInfo() {
 

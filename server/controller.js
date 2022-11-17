@@ -77,12 +77,9 @@ module.exports = {
 //Gets all of the date ideas from custom_dates that the logged in user has created
   getUserDates: (req, res) => {
 
-  let { date_title, date_description, email } = req.body
-
   sequelize.query(`
     SELECT *
     FROM custom_dates
-    WHERE created_by = ('${email}')
     `)
     .then((dbRes) => {
       res.status(200).send(dbRes[0])
